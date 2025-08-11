@@ -857,6 +857,7 @@ static bool TextLineFilter_HandleLine(struct TextLineFilterData *Data)
     bool DeleteLine;
     const char *Pat;
     bool FoundMatch;
+    bool AllBlank;
 
     Line=(const char *)m_TLF_DPS->GetFrozenString(&Bytes);
     if(Line==NULL)
@@ -925,10 +926,12 @@ static bool TextLineFilter_HandleLine(struct TextLineFilterData *Data)
     if(!DeleteLine)
     {
         FoundMatch=false;
+        AllBlank=true;
         for(r=0;r<MAX_REGEX;r++)
         {
             if(!Data->RegexIncludeFilterStr[r].empty())
             {
+                AllBlank=false;
                 regex RxPattern(Data->RegexIncludeFilterStr[r]);
                 if(regex_search((const char *)Line,RxPattern))
                 {
@@ -938,7 +941,7 @@ static bool TextLineFilter_HandleLine(struct TextLineFilterData *Data)
             }
         }
         /* If we didn't find a match then we delete the line */
-        if(!FoundMatch)
+        if(!AllBlank && !FoundMatch)
             DeleteLine=true;
     }
 
