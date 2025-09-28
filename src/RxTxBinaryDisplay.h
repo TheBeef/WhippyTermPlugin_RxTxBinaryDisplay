@@ -1,5 +1,5 @@
 /*******************************************************************************
- * FILENAME: TextLineFilter.h
+ * FILENAME: RxTxBinaryDisplay.h
  * 
  * PROJECT:
  *    Whippy Term
@@ -28,8 +28,8 @@
  *       Created
  *
  *******************************************************************************/
-#ifndef __TEXTLINEFILTER_H_
-#define __TEXTLINEFILTER_H_
+#ifndef __RXTXBINARYDISPLAY_H_
+#define __RXTXBINARYDISPLAY_H_
 
 /***  HEADER FILES TO INCLUDE          ***/
 #include "PluginSDK/Plugin.h"
@@ -45,6 +45,6 @@
 /***  GLOBAL VARIABLE DEFINITIONS      ***/
 
 /***  EXTERNAL FUNCTION PROTOTYPES     ***/
-void TextLineFilter_RegisterPlugin(const struct PI_SystemAPI *SysAPI);
+void RxTxBinaryDisplay_RegisterPlugin(const struct PI_SystemAPI *SysAPI);
 
 #endif

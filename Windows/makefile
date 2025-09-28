@@ -1,10 +1,10 @@
 CC = g++
 # add -g for debugging info
-CC_FLAGS = -Wall -fmax-errors=1 -Wfatal-errors -Wno-memset-transposed-args -fPIC
+CC_FLAGS = -g -Wall -fmax-errors=1 -Wfatal-errors -Wno-memset-transposed-args -fPIC
 LNK_FLAGS = -shared
 
 # Final binary
-BIN = TextLineFilter.dll
+BIN = RxTxBinaryDisplay.dll
 
 # Put all auto generated stuff to this build dir.
 BUILD_DIR = build
@@ -15,9 +15,10 @@ SRC_DIR = src
 LIBS_DIR = ..
 
 # List of all .c source files.
-SOURCE = $(SRC_DIR)\TextLineFilter.cpp \
+SOURCE = $(SRC_DIR)\RxTxBinaryDisplay.cpp \
 
-INCLUDES = ..\src \
+INCLUDES = src \
+	..\..\..\..\..\src
 
 # All .o files go to build dir.
 OBJ = $(SOURCE:%.c=$(BUILD_DIR)\\%.o)

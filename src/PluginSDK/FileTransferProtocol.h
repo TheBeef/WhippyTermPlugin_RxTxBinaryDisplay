@@ -34,7 +34,6 @@
 
 /***  HEADER FILES TO INCLUDE          ***/
 #include "PluginTypes.h"
-#include "PluginUI.h"
 #include <stdint.h>
 
 /***  DEFINES                          ***/
