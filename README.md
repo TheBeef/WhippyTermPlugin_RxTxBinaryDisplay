@@ -1,2 +1,2 @@
 # WhippyTermPlugin_TextLineFilter
-A WhippyTerm display processor that filters out lines in the incoming stream.
+A WhippyTerm plugin that shows incoming and outgoing binary data in different colors
