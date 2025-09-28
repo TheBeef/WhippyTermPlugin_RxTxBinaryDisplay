@@ -1,6 +1,6 @@
 CC = g++
 # add -g for debugging info
-CC_FLAGS = -g -Wall -fmax-errors=1 -Wfatal-errors -Wno-memset-transposed-args -fPIC
+CC_FLAGS = -Wall -fmax-errors=1 -Wfatal-errors -Wno-memset-transposed-args -fPIC
 LNK_FLAGS = -shared
 
 # Final binary
@@ -17,8 +17,7 @@ LIBS_DIR = ..
 # List of all .c source files.
 SOURCE = $(SRC_DIR)\RxTxBinaryDisplay.cpp \
 
-INCLUDES = src \
-	..\..\..\..\..\src
+INCLUDES = ..\src \
 
 # All .o files go to build dir.
 OBJ = $(SOURCE:%.c=$(BUILD_DIR)\\%.o)
